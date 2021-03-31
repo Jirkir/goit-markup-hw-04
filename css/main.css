@@ -10,6 +10,7 @@
 Цвет фона третий #2F303A */
 :root {
   --primary-text-color: #757575;
+  --bg-features-color: #f5f4fa;
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --white-color: #ffffff;
@@ -162,8 +163,14 @@ img {
 ================== */
 
 .hero {
+  display: block;
   padding: 200px 0;
   text-align: center;
+
+  background-image: url(../images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero,
 .footer {
@@ -251,11 +258,35 @@ img {
 .feature-item:not(:last-child) {
   margin-right: 30px;
 }
+.feature-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-color: var(--bg-features-color);
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+.antenna::before {
+  background-image: url(../images/features/antenna.svg);
+}
+.clock::before {
+  background-image: url(../images/features/clock.svg);
+}
+.diagram::before {
+  background-image: url(../images/features/diagram.svg);
+}
+.astronaut::before {
+  background-image: url(../images/features/astronaut.svg);
+}
+
 .feature-item p {
   line-height: 24px;
   letter-spacing: 0.03em;
 }
 .feature-list .title {
+  margin-top: 30px;
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: bold;
