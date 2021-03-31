@@ -11,6 +11,7 @@
 :root {
   --primary-text-color: #757575;
   --bg-features-color: #f5f4fa;
+  --bg-hero-color: rgba(47, 48, 58, 0.4);
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --white-color: #ffffff;
@@ -37,7 +38,7 @@ body {
 }
 
 a {
-  display: block;
+  display: inline-block;
   text-decoration: none;
 }
 address {
@@ -163,11 +164,17 @@ img {
 ================== */
 
 .hero {
-  display: block;
   padding: 200px 0;
+  margin: 0 auto;
   text-align: center;
+  max-width: 1600px;
 
-  background-image: url(../images/hero.jpg);
+  background-image: linear-gradient(
+      to right,
+      var(--bg-hero-color),
+      var(--bg-hero-color)
+    ),
+    url(../images/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
